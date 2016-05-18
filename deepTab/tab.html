@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+        font-size: 14px;
+        -webkit-user-select: none;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+
+    .box {
+        margin: 10px auto;
+        width: 500px;
+    }
+
+    .box ul {
+        position: relative;
+        top: 1px;
+    }
+
+    .box ul:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+
+    .box ul li {
+        float: left;
+        margin-right: 15px;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid green;
+        cursor: pointer;
+    }
+
+    .box ul li.active {
+        background: lightblue;
+        border-bottom-color: lightblue;
+    }
+
+    .box div {
+        display: none;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        background: lightblue;
+        border: 1px solid green;
+    }
+</style>
+
+
+<body>
+<div id="box" class="box">
+    <ul>
+        <li class="active">页卡一</li>
+        <li>页卡二</li>
+        <li>页卡三</li>
+        <li>页卡四</li>
+    </ul>
+    <div style="display: block">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+    <div>内容四</div>
+</div>
+<div id="box1" class="box">
+    <ul>
+        <li class="active">页卡一</li>
+        <li>页卡二</li>
+        <li>页卡三</li>
+        <li>页卡四</li>
+    </ul>
+    <div style="display: block">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+    <div>内容四</div>
+</div>
+<div id="box2" class="box">
+    <ul>
+        <li class="active">页卡一</li>
+        <li>页卡二</li>
+        <li>页卡三</li>
+        <li>页卡四</li>
+    </ul>
+    <div style="display: block">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+    <div>内容四</div>
+</div>
+</body>
+<script src="deepTab.js"></script>
+<script>
+    deeptab({
+            id:"box",
+           auto:true,   //是否自动播放
+           j:0          //默认第几个
+       });
+    deeptab({
+           id:"box1",
+           auto:false,
+           j:1
+       })
+    deeptab({
+           id:"box2",
+           auto:false,
+           j:2
+       })
+</script>
+</html>
